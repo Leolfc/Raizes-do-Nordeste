@@ -10,6 +10,7 @@ const Carousel = CarouselModule.default.default
 console.log("O que é o Carousel:", Carousel)
 export function CategoriesCarousel(){
   const [categories, setCategories] = useState([])
+
   const navigate = useNavigate()
 
 

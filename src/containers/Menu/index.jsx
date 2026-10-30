@@ -51,7 +51,7 @@ useEffect(()=>{
   if(activeCategory === 0){
     setFilteredProducts(products)
   }else{
-    const newFilteredProducts = products.filter((product)=>product.categoryId === activeCategory)
+    const newFilteredProducts = products.filter((product)=>product.category_id === activeCategory)
     setFilteredProducts(newFilteredProducts)
   }
 },[activeCategory,products])
