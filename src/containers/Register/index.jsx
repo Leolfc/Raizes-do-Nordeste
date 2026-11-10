@@ -4,7 +4,7 @@ import * as yup from "yup"
 import {api} from "../../services/api.js"
 import { toast } from "react-toastify"
 import { Container, Form, InputContainer, LeftContainer,  RightContainer, Title, Link} from "./styles"
-import Logo from "../../assets/Logo.svg"
+import Logo from "../../assets/logoRaizes.jfif"
 import {Button} from "../../components/Button/index"
 import { useNavigate } from "react-router-dom"
 
@@ -42,7 +42,7 @@ const schema = yup
     )
     if(status===200 || status===201){
       setTimeout(()=>{
-useNavigate("/login")
+navigate("/login")
       }, 2000)
       toast.success("Cadastro realizado com sucesso😉")
     }else if(status === 409){
@@ -62,7 +62,7 @@ toast.error("Email já cadastrado🥲")
       <Container>
     
        <LeftContainer>
-       <img src={Logo}/>
+       <img src={Logo} alt="Raízes do Nordeste"/>
        </LeftContainer>
 
         <RightContainer>
@@ -95,7 +95,7 @@ toast.error("Email já cadastrado🥲")
 
     <Button type="submit" >Criar conta</Button>
         </Form>
-        <p>Já possui uma conta? Clique aqui <Link to={"/"}>Clique aqui.</Link></p>
+        <p>Já possui uma conta? <Link to="/login">Clique aqui.</Link></p>
         </RightContainer>
       </Container>
   )

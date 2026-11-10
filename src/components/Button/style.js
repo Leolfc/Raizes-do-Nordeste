@@ -1,22 +1,36 @@
 import styled from "styled-components";
 
 export const ContainerButton = styled.button`
-width: 100%;
-height: 52px;
-border: none;
-border-radius: 5px;
-background-color: #9758a6;
-font-family: "Road Rage", sans-serif;
-font-size:30px;
-color: white;
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 12px;
+  background-color: #9758a6;
+  font-family: "Road Rage", sans-serif;
+  font-size: 30px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(151, 88, 166, 0.35);
+  transition:
+    background-color 200ms,
+    transform 150ms,
+    box-shadow 200ms;
 
+  &:hover {
+    background-color: #6f357c;
+    box-shadow: 0 10px 24px rgba(111, 53, 124, 0.4);
+  }
 
-&:hover{
-  background-color: #6f3576;
-  border: 1px dashed white;
- background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='14' ry='14' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
-border-radius: 14px;
-border-radius: 5px;
-}
+  &:active {
+    transform: scale(0.98);
+  }
 
-`
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    height: 50px;
+    font-size: 26px;
+  }
+`;

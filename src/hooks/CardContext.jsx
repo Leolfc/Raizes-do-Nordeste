@@ -10,12 +10,12 @@ const putProductInCart = (product)=>{
 const cartIndex = cartProducts.findIndex(prd => prd.id === product.id)
 let newProductsInCart = []
 if(cartIndex >=0){
-  newProductsInCart = cartProducts
-  newProductsInCart[cartIndex].quantity  = newProductsInCart[cartIndex].quantity + 1
+  newProductsInCart = cartProducts.map((prd) =>
+    prd.id === product.id ? {...prd, quantity: prd.quantity + 1} : prd
+  )
   setCartProducts(newProductsInCart)
 }else{
-product.quantity = 1
-newProductsInCart =[...cartProducts,product]
+newProductsInCart =[...cartProducts,{...product, quantity: 1}]
 setCartProducts(newProductsInCart)
 }
 

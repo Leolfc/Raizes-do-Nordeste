@@ -82,9 +82,9 @@ export default function CheckoutForm() {
   }
 
   return (
-    <div className="container">
+    <div className="checkout-container">
       <form id="payment-form" onSubmit={handleSubmit}>
-
+        <h2>Pagamento</h2>
         <PaymentElement id="payment-element" options={paymentElementOptions} />
         <button className="button" disabled={isLoading || !stripe || !elements} id="submit">
           <span id="button-text">
@@ -93,7 +93,7 @@ export default function CheckoutForm() {
         </button>
         {/* Show any error or success messages */}
         {message && <div id="payment-message">{message}</div>}
-        <p>Os métodos são disponibilizados de acordo com a sua região.</p>
+        <p className="note">Os métodos são disponibilizados de acordo com a sua região.</p>
       </form>
     </div>
   );

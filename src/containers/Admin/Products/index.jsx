@@ -59,18 +59,15 @@ loadProducts()
               <TableCell component="th" scope="row">
                 {product.name}
               </TableCell>
-              <TableCell align="right">{formatPrice(product.price)}</TableCell>
-              <TableCell align="right">{isOffer(product.offer)}</TableCell>
-              <TableCell align="right">
+              <TableCell align="center">{formatPrice(product.price)}</TableCell>
+              <TableCell align="center">{isOffer(product.offer)}</TableCell>
+              <TableCell align="center">
               <ProductsImage src={product.url} alt={product.name} />
               </TableCell>
-              <EditButton onClick={() => editProduct(product)}>
-                <PencilIcon/>
-              </EditButton>
-              
-              <TableCell align="right">
-
-              
+              <TableCell align="center">
+                <EditButton onClick={() => editProduct(product)}>
+                  <PencilIcon size={18}/>
+                </EditButton>
               </TableCell>
             </TableRow>
           ))}

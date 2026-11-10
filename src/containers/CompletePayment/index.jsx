@@ -82,8 +82,7 @@ export function CompletePayment() {
   }, [stripe]);
 
   return (
-   <div className="container">
-  
+   <div className="payment-status-container">
 
     <div id="payment-status">
       <div id="status-icon" style={{backgroundColor: STATUS_CONTENT_MAP[status].iconColor}}>

@@ -1,19 +1,20 @@
-
-import { OffersCarousel,CategoriesCarousel } from "../../components";
-import { Banner, Container, Content } from "./style";
-
+import { OffersCarousel, CategoriesCarousel } from "../../components";
+import { Banner, Container, Content, MenuLink } from "./style";
 
 export function Home() {
   return (
     <main>
       <Banner>
-        <h1>Bem-vindo(a)!</h1>
+        <div>
+          <h1>Bem-vindo(a)!</h1>
+          <p>O sabor do sertão em cada mordida.</p>
+          <MenuLink to="/cardapio">Ver cardápio</MenuLink>
+        </div>
       </Banner>
       <Container>
         <Content>
-         <CategoriesCarousel></CategoriesCarousel>
-          <OffersCarousel/>
-       
+          <CategoriesCarousel />
+          <OffersCarousel />
         </Content>
       </Container>
     </main>

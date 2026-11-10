@@ -61,16 +61,17 @@ useEffect(()=>{
     <main>
      <Container>
       <Banner>
-        <h1>O MELHOR <br />HAMBURGUER<br /> ESTA AQUI!
-         <span>
-        Este cardápio esta inrresistivel!
-      </span>
+        <h1>
+          O MELHOR <br />
+          HAMBÚRGUER <br />
+          ESTÁ AQUI!
+          <span>Este cardápio está irresistível!</span>
         </h1>
-       
       </Banner>
       <CategoryMenu>
      {categories.map(category=>(
       <CategoryButton key={category.id}
+      type="button"
       $isActiveCategory={category.id === activeCategory}
        onClick={()=>{
         navigate(

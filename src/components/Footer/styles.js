@@ -1,16 +1,27 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
- export const Container = styled.div`
- height: 50px;
- background-color: #5c2669;
-width: 100vw;
-display: flex;
-align-items: center;
-justify-content: center;
-p{
-  color: white;
-  font-size: 14px;
-font-weight: lighter;
-  padding: 10px
-}
-`
+export const Container = styled.footer`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  margin-top: auto;
+  padding: 24px 16px;
+  background-color: ${(props) => props.theme.darkPurple};
+  text-align: center;
+
+  strong {
+    font-family: ${(props) => props.theme.roadRageFont};
+    font-size: 28px;
+    font-weight: 400;
+    color: ${(props) => props.theme.white};
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    font-weight: 400;
+  }
+`;

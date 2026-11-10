@@ -69,7 +69,7 @@ putUserData(userData)
       <Container>
     
        <LeftContainer>
-       <img src={Logo}/>
+       <img src={Logo} alt="Raízes do Nordeste"/>
        </LeftContainer>
 
         <RightContainer>
