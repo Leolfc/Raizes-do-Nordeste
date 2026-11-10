@@ -23,7 +23,19 @@ async function loadCategories() {
 }
 loadCategories()
 
+// async function loadProducts() {
+//   const {data} = await api.get("/products")
+//   const onlyOffers  = data.filter((product)=> product.offer).map((product)=>(
+//     {currencyValue:formatPrice(product.price),
+//     ...product
+//     }
+//   ))
+//   console.log(onlyOffers)
+//   setOffers(onlyOffers)
+// }
 
+// loadProducts()
+  }, [])
 
 const responsive = {
   superLargeDesktop: {
