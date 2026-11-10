@@ -20,7 +20,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expor a porta que Easypanel vai usar
 
-EXPOSE 80
+EXPOSE 3001
 
 
 CMD ["nginx", "-g", "daemon off;"]
